@@ -1,0 +1,19 @@
+{
+    "variants": {
+        "facing=north": {
+            "model": "quantumstorage:block/trashcan"
+        },
+        "facing=south": {
+            "model": "quantumstorage:block/trashcan",
+            "y": 180
+        },
+        "facing=west": {
+            "model": "quantumstorage:block/trashcan",
+            "y": 270
+        },
+        "facing=east": {
+            "model": "quantumstorage:block/trashcan",
+            "y": 90
+        }
+    }
+}

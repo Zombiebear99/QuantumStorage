@@ -1,0 +1,9 @@
+Manifest-Version: 1.0
+Specification-Title: QuantumStorage
+Specification-Vendor: gigabit101
+Specification-Version: 5.3.1
+Implementation-Title: QuantumStorage
+Implementation-Version: 5.3.1
+Implementation-Vendor: gigabit101
+Implementation-Timestamp: 2023-11-30T19:26:26+0530
+
