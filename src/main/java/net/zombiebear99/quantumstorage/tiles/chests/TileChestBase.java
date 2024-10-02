@@ -1,5 +1,6 @@
 package net.zombiebear99.quantumstorage.tiles.chests;
 
+import net.minecraft.world.level.material.PushReaction;
 import net.zombiebear99.quantumstorage.init.ModBlocks;
 import net.zombiebear99.quantumstorage.util.inventory.ItemUtils;
 import net.minecraft.core.BlockPos;
@@ -89,8 +90,12 @@ public class TileChestBase extends BaseContainerBlockEntity
     @Override
     protected AbstractContainerMenu createMenu(int p_58627_, Inventory p_58628_)
     {
-        return null;
+        AbstractContainerMenu containerMenu = createMenu(p_58627_, p_58628_);
+        return containerMenu;
     }
+
+
+    public PushReaction getPistonPushReaction(BlockState blockState){return PushReaction.NORMAL;}
 
     //TODO
     public void writeToNBTWithoutCoords(CompoundTag tagCompound)

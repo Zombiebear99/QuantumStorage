@@ -79,17 +79,17 @@ public class RecipeQuantumTank
 //        }
 //        return false;
 //    }
-    
+
     public Object getInput()
     {
         return input;
     }
-    
+
     public ItemStack getOutput()
     {
         return output;
     }
-    
+
     public FluidStack getFluidStack()
     {
         return fluidStack;
