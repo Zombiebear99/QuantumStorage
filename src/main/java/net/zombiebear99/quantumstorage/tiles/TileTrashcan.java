@@ -109,6 +109,10 @@ public class TileTrashcan extends BaseContainerBlockEntity
     public void clearContent()
     {
         //TODO
+        if(!inventory.getStackInSlot(0).isEmpty())
+        {
+            inventory.setStackInSlot(0, ItemStack.EMPTY);
+        }
 
     }
 }

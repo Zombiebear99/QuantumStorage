@@ -8,6 +8,7 @@
           <platformType>MIXIN</platformType>
           <platformType>MCP</platformType>
         </autoDetectTypes>
+        <projectReimportVersion>1</projectReimportVersion>
       </configuration>
     </facet>
   </component>
@@ -17,9 +18,5 @@
     <option name="minecraftVersion" value="1.18.2" />
     <option name="platformVersion" value="40.1.0" />
     <option name="srgType" value="TSRG" />
-  </component>
-  <component name="NewModuleRootManager" inherit-compiler-output="true">
-    <exclude-output />
-    <orderEntry type="sourceFolder" forTests="false" />
   </component>
 </module>

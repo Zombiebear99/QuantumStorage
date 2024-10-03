@@ -1,5 +1,7 @@
 package net.zombiebear99.quantumstorage.containers;
 
+import net.minecraft.world.level.block.piston.PistonMovingBlockEntity;
+import net.minecraftforge.event.world.PistonEvent;
 import net.zombiebear99.quantumstorage.containers.prefab.ContainerQS;
 import net.zombiebear99.quantumstorage.inventory.slot.SlotAntiCrate;
 import net.zombiebear99.quantumstorage.tiles.chests.TileChestBase;
@@ -13,6 +15,7 @@ public class ContainerChestBase extends ContainerQS {
         super(containerType, id);
     }
 
+    public static PistonEvent.PistonMoveType moveType = PistonEvent.PistonMoveType.EXTEND;
     public void addSlots(TileChestBase te, int columns, Inventory playerInv){
         int row = 0;
 

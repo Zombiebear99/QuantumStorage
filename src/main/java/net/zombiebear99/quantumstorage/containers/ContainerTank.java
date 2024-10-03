@@ -18,7 +18,7 @@ public class ContainerTank extends ContainerQS
     
     public ContainerTank(int id, Inventory playerInv, FriendlyByteBuf extraData)
     {
-        this(id, playerInv, (TileTank) Objects.requireNonNull(Minecraft.getInstance().level.getBlockEntity(extraData.readBlockPos())));
+        this(id, playerInv, (TileTank) Objects.requireNonNull(Minecraft.getInstance().level != null ? Minecraft.getInstance().level.getBlockEntity(extraData.readBlockPos()) : null));
     }
 
     public ContainerTank(int id, Inventory playerInv, TileTank te)
@@ -32,7 +32,9 @@ public class ContainerTank extends ContainerQS
         drawPlayersInv(playerInv, 15, 132);
         drawPlayersHotBar(playerInv, 15, 132 + 58);
     }
-    
+
+
+
     public IFluidTank getTank()
     {
         return tank;

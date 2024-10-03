@@ -1,5 +1,10 @@
 package net.zombiebear99.quantumstorage.tiles;
 
+import net.minecraft.world.item.BucketItem;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.item.Items;
+import net.minecraftforge.fluids.FluidActionResult;
+import net.minecraftforge.fluids.FluidUtil;
 import net.zombiebear99.quantumstorage.containers.ContainerTank;
 import net.zombiebear99.quantumstorage.init.ModBlocks;
 import net.zombiebear99.quantumstorage.network.VanillaPacketDispatcher;
@@ -19,6 +24,7 @@ import net.minecraftforge.fluids.capability.CapabilityFluidHandler;
 import net.minecraftforge.fluids.capability.templates.FluidTank;
 import net.minecraftforge.items.CapabilityItemHandler;
 import net.minecraftforge.items.ItemStackHandler;
+import org.jetbrains.annotations.NotNull;
 
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
@@ -39,36 +45,36 @@ public class TileTank extends BaseContainerBlockEntity
     //TODO
     public void tick()
     {
-//        if(!inventory.getStackInSlot(0).isEmpty())
-//        {
-//            ItemStack inputStack = inventory.getStackInSlot(0);
-//            ItemStack outputStack = inventory.getStackInSlot(1);
-//            Item item = inputStack.getItem();
-//            if (item instanceof BucketItem && item != Items.BUCKET)
-//            {
-//                if (outputStack.isEmpty() || ((outputStack.getItem() == Items.BUCKET) && outputStack.getCount() <outputStack.getMaxStackSize()))
-//                {
-//                    FluidActionResult fillResult = FluidUtil.tryEmptyContainer(inputStack, tank, Integer.MAX_VALUE, null, true);
-//                    if (fillResult.isSuccess())
-//                    {
-//                        inventory.extractItem(0, 1, false);
-//                        inventory.insertItem(1, fillResult.getResult(), false);
-//                    }
-//                }
-//            }
-//            inputStack = inventory.getStackInSlot(0);
-//            outputStack = inventory.getStackInSlot(1);
-//            item = inputStack.getItem();
-//            if (item == Items.BUCKET && outputStack.isEmpty())
-//            {
-//                FluidActionResult fillResult = FluidUtil.tryFillContainer(inputStack, tank, Integer.MAX_VALUE, null, true);
-//                if (fillResult.isSuccess())
-//                {
-//                    inventory.extractItem(0, 1, false);
-//                    inventory.insertItem(1, fillResult.getResult(), false);
-//                }
-//            }
-//        }
+        if(!inventory.getStackInSlot(0).isEmpty())
+        {
+            ItemStack inputStack = inventory.getStackInSlot(0);
+            ItemStack outputStack = inventory.getStackInSlot(1);
+            Item item = inputStack.getItem();
+            if (item instanceof BucketItem && item != Items.BUCKET)
+            {
+                if (outputStack.isEmpty() || ((outputStack.getItem() == Items.BUCKET) && outputStack.getCount() <outputStack.getMaxStackSize()))
+                {
+                    FluidActionResult fillResult = FluidUtil.tryEmptyContainer(inputStack, tank, Integer.MAX_VALUE, null, true);
+                    if (fillResult.isSuccess())
+                    {
+                        inventory.extractItem(0, 1, false);
+                        inventory.insertItem(1, fillResult.getResult(), false);
+                    }
+                }
+            }
+            inputStack = inventory.getStackInSlot(0);
+            outputStack = inventory.getStackInSlot(1);
+            item = inputStack.getItem();
+            if (item == Items.BUCKET && outputStack.isEmpty())
+            {
+                FluidActionResult fillResult = FluidUtil.tryFillContainer(inputStack, tank, Integer.MAX_VALUE, null, true);
+                if (fillResult.isSuccess())
+                {
+                    inventory.extractItem(0, 1, false);
+                    inventory.insertItem(1, fillResult.getResult(), false);
+                }
+            }
+        }
     }
     
     @Override
@@ -115,7 +121,7 @@ public class TileTank extends BaseContainerBlockEntity
     }
 
     @Override
-    public AbstractContainerMenu createMenu(int id, Inventory inventory)
+    public @NotNull AbstractContainerMenu createMenu(int id, @NotNull Inventory inventory)
     {
         return new ContainerTank(id, inventory, this);
     }

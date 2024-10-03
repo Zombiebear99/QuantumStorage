@@ -18,6 +18,7 @@ public class ContainerChestGold extends ContainerChestBase {
         super(ModContainers.CHEST_GOLD_CONTAINER.get(), id);
 
         addSlots(te, 9, playerInv);
+
     }
 
 

@@ -1,4 +1,4 @@
-Java Launcher: C:\Users\DELL\.jdks\temurin-17.0.9-1\bin\java.exe
+Java Launcher: C:\Users\DELL\.jdks\temurin-17.0.10\bin\java.exe
 Arguments: '--in-jar, F:\testing making mods\QuantumStorage-1.18.2\build\libs\QuantumStorage-1.18.2-5.3.1.jar, --out-jar, F:\testing making mods\QuantumStorage-1.18.2\build\reobfJar\output.jar, --srg-in, F:\testing making mods\QuantumStorage-1.18.2\build\createMcpToSrg\output.tsrg, --live'
 Classpath:
  - C:\Users\DELL\.gradle\caches\forge_gradle\maven_downloader\net\md-5\SpecialSource\1.11.0\SpecialSource-1.11.0-shaded.jar

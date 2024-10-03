@@ -11,6 +11,7 @@ import javax.annotation.Nullable;
 
 public class ContainerQS extends AbstractContainerMenu
 {
+
     public ContainerQS(@Nullable MenuType<?> p_i50105_1_, int p_i50105_2_)
     {
         super(p_i50105_1_, p_i50105_2_);
